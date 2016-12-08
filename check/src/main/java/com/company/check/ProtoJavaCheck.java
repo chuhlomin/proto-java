@@ -11,7 +11,9 @@ public class ProtoJavaCheck {
                 .setPrintData(
                         Article.PrintData.newBuilder()
                                 .setPage(1)
+                                .setIsPublished(true)
                                 .setSection("NEWS")
+                                .setColumn("Review")
                 )
                 .setKicker("BOOM")
                 .build();
@@ -21,9 +23,9 @@ public class ProtoJavaCheck {
         try {
             Image image = Image.parseFrom(bytes);
 
-            System.out.println("Caption: " + image.getCaption()); // Output: TITLE (same field type, ok)
-            System.out.println("Author: " + image.getAuthor()); // Output: NEWS (why?)
-            System.out.println("Width: " + image.getWidth()); // Output: 0 (default)
+            System.out.println("Caption: " + image.getCaption()); // TITLE
+            System.out.println("Author: " + image.getAuthor()); // NEWS" Review
+            System.out.println("Width: " + image.getWidth()); // 0
 
         } catch (InvalidProtocolBufferException e) {
             e.printStackTrace();

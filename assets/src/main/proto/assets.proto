@@ -8,11 +8,13 @@ option java_package = "com.company.assets";
 message Article {
   message PrintData {
     int32 page = 1;
-    string section = 2;
+    bool is_published = 2;
+    string section = 3;
+    string column = 4;
   }
 
   string title = 1;
-  PrintData printData = 2;
+  PrintData print_data = 2;
   string kicker = 3;
 }
 
