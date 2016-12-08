@@ -13,6 +13,7 @@ public class ProtoJavaCheck {
                                 .setPage(1)
                                 .setSection("NEWS")
                 )
+                .setKicker("BOOM")
                 .build();
 
         byte[] bytes = article.toByteArray();
