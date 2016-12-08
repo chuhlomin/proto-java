@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package check;
+
+option java_multiple_files = true;
+option java_package = "com.company.assets";
+
+message Article {
+  message PrintData {
+    int32 page = 1;
+    string section = 2;
+  }
+
+  string title = 1;
+  PrintData printData = 2;
+}
+
+message Image {
+  string caption = 1;
+  string author = 2;
+  int32 width = 3;
+}
